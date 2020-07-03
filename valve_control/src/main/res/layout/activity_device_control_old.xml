@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/old_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="@string/app_name"
+        app:titleTextColor="@android:color/black" >
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_selector"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include layout="@layout/detail_device"></include>
+
+        <include layout="@layout/divider"></include>
+
+
+
+
+
+        <!--三状态开关-->
+        <LinearLayout
+            android:id="@+id/master_switch_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ademar.phasedseekbar.PhasedSeekBar
+            android:id="@+id/psb_hor"
+            android:layout_width="120dp"
+            android:layout_height="360dp"
+
+
+            app:phased_anchor_height="40dp"
+            app:phased_anchor_width="40dp"
+            app:phased_base_background="@drawable/black_track"
+            app:phased_base_margin_bottom="20dp"
+            app:phased_base_margin_left="10dp"
+            app:phased_base_margin_right="10dp"
+            app:phased_base_margin_top="0dp"
+            app:phased_item_height="100dp"
+            app:phased_item_width="100dp"
+            app:phased_mode="vertical" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>
+

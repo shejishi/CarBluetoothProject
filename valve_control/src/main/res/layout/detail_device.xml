@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/device_image"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/bluetooth"
+        android:layout_width="60dp"
+        android:layout_height="44dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEST-01"
+            android:textColor="#fff"
+            android:textSize="25dp"/>
+
+        <TextView android:id="@+id/device_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01-23-45-67-89-AB"
+            android:textColor="@color/sub_text"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Switch
+            android:id="@+id/device_switch"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:switchMinWidth="40dp"
+            android:textOff="  "
+            android:textOn="  "
+            android:checked="false"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track" />
+
+    </LinearLayout>
+
+</LinearLayout>
